@@ -2,11 +2,9 @@ import * as React from 'react';
 
 import * as styles from './styles.module.scss';
 
-const Page: React.FC = () => {
+const Page: React.FC = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <h1>Page not found</h1>
-    </div>
+    <div className={styles.container}>persistant menu item here{children}</div>
   );
 };
 

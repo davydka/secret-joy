@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import * as styles from './styles.module.scss';
 
-interface IndexPageProps {
+interface PageProps {
   data: {
     site: {
       siteMetadata: {
@@ -15,8 +15,8 @@ interface IndexPageProps {
   };
 }
 
-export const indexPageQuery = graphql`
-  query IndexPageQuery {
+export const pageQuery = graphql`
+  query PageQuery {
     site {
       siteMetadata {
         name
@@ -26,18 +26,18 @@ export const indexPageQuery = graphql`
   }
 `;
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
+const Page2: React.FC<PageProps> = ({ data }) => {
   const { name, tagline } = data.site.siteMetadata;
 
   return (
     <div className={styles.container}>
-      <h1>{name}</h1>
+      <h1>Page 2</h1>
       <p>{tagline}</p>
       <p>
-        <Link to='/page-2'>Page 2</Link>
+        <Link to='/'>Home</Link>
       </p>
     </div>
   );
 };
 
-export default IndexPage;
+export default Page2;
