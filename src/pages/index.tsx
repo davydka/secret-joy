@@ -34,7 +34,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <h1>{name}</h1>
       <p>{tagline}</p>
       <p>
-        <Link to='/page-2'>Page 2</Link>
+        <Link to="/page-2">Page 2</Link>
       </p>
     </div>
   );

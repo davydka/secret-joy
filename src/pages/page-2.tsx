@@ -27,14 +27,14 @@ export const pageQuery = graphql`
 `;
 
 const Page2: React.FC<PageProps> = ({ data }) => {
-  const { name, tagline } = data.site.siteMetadata;
+  const { tagline } = data.site.siteMetadata;
 
   return (
     <div className={styles.container}>
       <h1>Page 2</h1>
       <p>{tagline}</p>
       <p>
-        <Link to='/'>Home</Link>
+        <Link to="/">Home</Link>
       </p>
     </div>
   );

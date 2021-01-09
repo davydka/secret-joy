@@ -4,7 +4,7 @@ import Layout from './src/components/Layout/Layout';
 
 // import './src/styles/fonts.scss';
 // import './src/styles/resets.scss';
-// import './src/styles/defaults.scss';
+import './src/styles/global.scss';
 
 // export const wrapRootElement = wrapWithProvider;
 
