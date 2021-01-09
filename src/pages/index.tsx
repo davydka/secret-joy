@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface IndexPageProps {
   data: {
