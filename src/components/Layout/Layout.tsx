@@ -46,12 +46,15 @@ const Controls: React.FC<any> = ({ plyrRef, ...props }) => {
 
   useFrame(() => {
     ref.current?.update();
-    plyrRef.current?.plyr && setCurrentTime(plyrRef.current.plyr.currentTime);
+    plyrRef.current?.plyr && setCurrentTime(plyrRef.current?.plyr.currentTime);
   });
   return <orbitControls ref={ref} args={[camera, gl.domElement]} {...props} />;
 };
 
 const Page: React.FC = ({ children }) => {
+  if (typeof window === 'undefined') {
+    return <>{children}</>;
+  }
   const { nodes } = useLoader<any>(GLTFLoader, gltfModel);
   const plyrRef = useRef<any>();
 
@@ -67,6 +70,10 @@ const Page: React.FC = ({ children }) => {
 
     plyrRef.current.plyr.hideControls = true;
   }, [plyrRef.current]);
+
+  if (!window) {
+    return null;
+  }
 
   return (
     <div className={styles.container}>

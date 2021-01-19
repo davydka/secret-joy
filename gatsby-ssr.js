@@ -8,5 +8,8 @@ import Layout from './src/components/Layout/Layout';
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
+  if (props.location.pathname === '/404/') {
+    return <div {...props}>{element}</div>;
+  }
   return <Layout {...props}>{element}</Layout>;
 };
