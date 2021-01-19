@@ -27,8 +27,32 @@
   }
 }
 
+.playerContainer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+
+  @media only screen and (max-width: 639px) {
+    & {
+      bottom: 116px;
+    }
+  }
+}
+
 .page {
   position: absolute;
   top: 0;
   height: 100vh;
+  pointer-events: none;
+
+  & a {
+    pointer-events: auto;
+  }
+}
+
+:root {
+  --plyr-color-main: #2f3640;
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-background-hover: #4a5564;
 }

@@ -1,11 +1,7 @@
 module.exports = {
   siteMetadata: {
-    name: `Hello there!`,
-    tagline: `Gatsby + SASS + Typescript = 💪`,
+    name: `model figures`,
+    tagline: `SDXs100100FX_UR-145`,
   },
-  plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-tslint`,
-  ],
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-typescript`, `gatsby-plugin-tslint`],
 };
