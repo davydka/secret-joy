@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 const Page2: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h1>Page 2</h1>
+      <h1>===============================================================</h1>
       <p>+++++++______________+++++++</p>
       <p>
         <Link to="/">Home</Link>
