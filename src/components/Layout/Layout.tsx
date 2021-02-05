@@ -8,6 +8,7 @@ import 'plyr-react/dist/plyr.css';
 
 import { useStore } from '../../store/store';
 
+import Guide from '../Light/Guide';
 import Light from '../Light/Light';
 import Model from '../Model/Model';
 
@@ -82,6 +83,7 @@ const Layout: React.FC = ({ children }) => {
           {/* <ambientLight intensity={0.4} /> */}
           <Model />
           <Light />
+          <Guide />
           {/* <pointLight intensity={1} position={[100, 50, 100]} rotation={[-Math.PI / 2, 0, 0]} /> */}
           <Controls
             plyrRef={plyrRef}

@@ -16,7 +16,7 @@ const Cube = ({ ...rest }) => {
   const morphClip = animations.filter((a: any) => a.name === 'KeyAction')[0];
 
   const meshRef = useUpdate<THREE.Mesh>(mesh => {
-    console.log('hello Key Cube', mesh);
+    console.log('Key Cube\n', mesh);
     mesh.updateMorphTargets();
     if (mesh.morphTargetInfluences) {
       mesh.morphTargetInfluences[0] = 1;
