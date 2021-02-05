@@ -11,7 +11,7 @@ import { useStore } from '../../store/store';
 import Light from '../Light/Light';
 import Cube from '../Cube/Cube';
 
-import gltfModel from '../../assets/models/model-morph.gltf';
+import gltfModel from '../../assets/models/model-morph.glb';
 import track01 from '../../assets/audio/01.mp3';
 
 useLoader.preload(GLTFLoader, gltfModel);
@@ -70,12 +70,13 @@ const Layout: React.FC = ({ children }) => {
       <Suspense fallback={null}>
         <Canvas
           concurrent={true}
+          pixelRatio={window?.devicePixelRatio || 1}
           style={{
-            background: 'radial-gradient(at 50% 70%, #200f20 40%, #090b1f 80%, #050523 100%)',
+            background: 'radial-gradient(at 50% 100%, #232323 40%, #090b1f 80%, #0e0e0e 100%)',
           }}
           camera={{
             position: nodes.Camera.position,
-            rotation: nodes.Camera.rotation,
+            // rotation: nodes.Camera.rotation, // rotation has no effect due to orbitcontrols
           }}
           shadowMap={true}>
           {/* <ambientLight intensity={0.4} /> */}

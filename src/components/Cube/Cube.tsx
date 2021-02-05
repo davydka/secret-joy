@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 import { useStore } from '../../store/store';
 
-import gltfModel from '../../assets/models/model-morph.gltf';
+import gltfModel from '../../assets/models/model-morph.glb';
 
 const Cube = ({ ...rest }) => {
   const mixerRef = useRef<THREE.AnimationMixer | undefined>();
@@ -38,6 +38,7 @@ const Cube = ({ ...rest }) => {
         dispose={null}
         geometry={nodes.Cube.geometry}
         material={nodes.Cube.material}
+        position={nodes.Cube.position}
       />
     </group>
   );

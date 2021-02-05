@@ -11,6 +11,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
           use: [`url-loader`],
         },
         {
+          test: /\.glb$/,
+          use: [`url-loader`],
+        },
+        {
           test: /\.mdd$/,
           use: [`url-loader`],
         },

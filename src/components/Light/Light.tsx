@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 import { useStore } from '../../store/store';
 
-import gltfModel from '../../assets/models/model-morph.gltf';
+import gltfModel from '../../assets/models/model-morph.glb';
 
 const Light = ({ ...rest }) => {
   const mixerRef = useRef<THREE.AnimationMixer | undefined>();
@@ -31,7 +31,7 @@ const Light = ({ ...rest }) => {
     <group {...rest} dispose={null}>
       <directionalLight
         ref={lightsRef}
-        intensity={0.75}
+        intensity={0.85}
         position={nodes.Light.position}
         rotation={nodes.Light.rotation}
       />
