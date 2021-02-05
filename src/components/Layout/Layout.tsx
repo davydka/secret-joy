@@ -9,7 +9,7 @@ import 'plyr-react/dist/plyr.css';
 import { useStore } from '../../store/store';
 
 import Light from '../Light/Light';
-import Cube from '../Cube/Cube';
+import Model from '../Model/Model';
 
 import gltfModel from '../../assets/models/model-morph.glb';
 import track01 from '../../assets/audio/01.mp3';
@@ -80,7 +80,7 @@ const Layout: React.FC = ({ children }) => {
           }}
           shadowMap={true}>
           {/* <ambientLight intensity={0.4} /> */}
-          <Cube />
+          <Model />
           <Light />
           {/* <pointLight intensity={1} position={[100, 50, 100]} rotation={[-Math.PI / 2, 0, 0]} /> */}
           <Controls

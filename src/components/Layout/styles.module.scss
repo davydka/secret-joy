@@ -48,6 +48,10 @@
 
   & a {
     pointer-events: auto;
+
+    &:visited {
+      color: blue;
+    }
   }
 }
 
